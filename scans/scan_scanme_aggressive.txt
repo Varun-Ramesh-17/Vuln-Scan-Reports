@@ -1,0 +1,40 @@
+# Nmap 7.98 scan initiated Sat Jun 27 14:28:54 2026 as: /usr/lib/nmap/nmap --privileged -A -oN scan_scanme_aggressive.txt scanme.nmap.org
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.23s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE    SERVICE    VERSION
+22/tcp    open     ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   1024 ac:00:a0:1a:82:ff:cc:55:99:dc:67:2b:34:97:6b:75 (DSA)
+|   2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)
+|   256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)
+|_  256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)
+25/tcp    filtered smtp
+80/tcp    open     http       Apache httpd 2.4.7 ((Ubuntu))
+|_http-favicon: Nmap Project
+|_http-title: Go ahead and ScanMe!
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+9929/tcp  open     nping-echo Nping echo
+31337/tcp open     tcpwrapped
+Aggressive OS guesses: Linux 4.19 - 5.15 (97%), Linux 4.15 (93%), IPFire 2.27 (Linux 5.15 - 6.1) (92%), Linux 5.4 (92%), Linux 5.0 - 5.14 (90%), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3) (90%), Linux 3.11 - 4.9 (89%), Linux 3.2 - 3.8 (89%), Linux 5.18 (89%), Linux 4.15 - 5.19 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 15 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   0.63 ms   DESKTOP-QABC0FK.mshome.net (172.23.192.1)
+2   1.78 ms   192.168.1.1
+3   ...
+4   6.66 ms   keralavisionisp-dynamic-5.65.139.103.keralavisionisp.com (103.139.65.5)
+5   ... 6
+7   81.67 ms  unknown.telstraglobal.net (210.57.30.86)
+8   71.10 ms  unknown.telstraglobal.net (202.84.207.181)
+9   236.52 ms i-1120.eqnx-core02.telstraglobal.net (202.84.141.153)
+10  235.67 ms i-92.eqnx03.telstraglobal.net (202.84.247.17)
+11  ... 14
+15  235.71 ms scanme.nmap.org (45.33.32.156)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jun 27 14:29:38 2026 -- 1 IP address (1 host up) scanned in 45.13 seconds
